@@ -28,12 +28,17 @@ public class Tasting {
 
     public Tasting() {}
 
-    public Tasting(Long id, String name, Date date, String imageUrl, List<Whisky> whiskys) {
-        this.id = id;
+    public Tasting(String name, Date date, String imageUrl, List<Whisky> whiskys) {
         this.name = name;
         this.date = date;
         this.imageUrl = imageUrl;
         this.whiskys = whiskys;
+    }
+
+    public Tasting(String name, Date date, String imageUrl) {
+        this.name = name;
+        this.date = date;
+        this.imageUrl = imageUrl;
     }
 
     // Getter und Setter

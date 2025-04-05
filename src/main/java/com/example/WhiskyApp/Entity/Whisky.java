@@ -31,8 +31,7 @@ public class Whisky {
 
     public Whisky() {}
 
-    public Whisky(Long id, String distillery, String name, Integer age, Double alcoholPercentage, String description, String imageUrl, Tasting tasting) {
-        this.id = id;
+    public Whisky(String distillery, String name, Integer age, Double alcoholPercentage, String description, String imageUrl, Tasting tasting) {
         this.distillery = distillery;
         this.name = name;
         this.age = age;
@@ -41,7 +40,6 @@ public class Whisky {
         this.imageUrl = imageUrl;
         this.tasting = tasting;
     }
-
     // Getter und Setter
 
     public Long getId() {
