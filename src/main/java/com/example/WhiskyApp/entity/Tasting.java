@@ -1,4 +1,4 @@
-package com.example.WhiskyApp.Entity;
+package com.example.WhiskyApp.entity;
 
 import jakarta.persistence.*;
 import java.util.Date;
@@ -40,8 +40,6 @@ public class Tasting {
         this.date = date;
         this.imageUrl = imageUrl;
     }
-
-    // Getter und Setter
 
     public Long getId() {
         return id;

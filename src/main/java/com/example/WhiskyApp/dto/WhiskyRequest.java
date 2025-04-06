@@ -1,4 +1,4 @@
-package com.example.WhiskyApp.DTO;
+package com.example.WhiskyApp.dto;
 
 public class WhiskyRequest {
 

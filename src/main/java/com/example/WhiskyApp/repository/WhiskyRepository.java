@@ -1,6 +1,6 @@
-package com.example.WhiskyApp.Repositories;
+package com.example.WhiskyApp.repository;
 
-import com.example.WhiskyApp.Entity.Whisky;
+import com.example.WhiskyApp.entity.Whisky;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface WhiskyRepository extends JpaRepository<Whisky, Long> {

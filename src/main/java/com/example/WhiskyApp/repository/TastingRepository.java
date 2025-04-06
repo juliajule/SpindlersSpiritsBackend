@@ -1,6 +1,6 @@
-package com.example.WhiskyApp.Repositories;
+package com.example.WhiskyApp.repository;
 
-import com.example.WhiskyApp.Entity.Tasting;
+import com.example.WhiskyApp.entity.Tasting;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface TastingRepository extends JpaRepository<Tasting, Long> {

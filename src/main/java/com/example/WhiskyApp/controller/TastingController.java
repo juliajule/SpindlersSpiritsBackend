@@ -1,7 +1,7 @@
-package com.example.WhiskyApp.Controller;
+package com.example.WhiskyApp.controller;
 
-import com.example.WhiskyApp.Entity.Tasting;
-import com.example.WhiskyApp.Repositories.TastingRepository;
+import com.example.WhiskyApp.entity.Tasting;
+import com.example.WhiskyApp.repository.TastingRepository;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 

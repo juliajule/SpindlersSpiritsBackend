@@ -1,4 +1,4 @@
-package com.example.WhiskyApp.Entity;
+package com.example.WhiskyApp.entity;
 
 import jakarta.persistence.*;
 import com.fasterxml.jackson.annotation.JsonBackReference;
@@ -40,7 +40,6 @@ public class Whisky {
         this.imageUrl = imageUrl;
         this.tasting = tasting;
     }
-    // Getter und Setter
 
     public Long getId() {
         return id;
