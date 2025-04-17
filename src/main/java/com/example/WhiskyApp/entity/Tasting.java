@@ -22,20 +22,23 @@ public class Tasting {
     @Column(name = "image_url", length = 512)
     private String imageUrl;
 
+    @Column
+    private String description;
+
     @OneToMany(mappedBy = "tasting", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonManagedReference
     private List<Whisky> whiskys;
 
     public Tasting() {}
 
-    public Tasting(String name, Date date, String imageUrl, List<Whisky> whiskys) {
+    public Tasting(String name, Date date, String imageUrl, String description, List<Whisky> whiskys) {
         this.name = name;
         this.date = date;
         this.imageUrl = imageUrl;
         this.whiskys = whiskys;
     }
 
-    public Tasting(String name, Date date, String imageUrl) {
+    public Tasting(String name, Date date, String imageUrl, String description) {
         this.name = name;
         this.date = date;
         this.imageUrl = imageUrl;
@@ -56,6 +59,8 @@ public class Tasting {
     public String getImageUrl() {
         return imageUrl;
     }
+
+    public String getDescription() {return description;}
 
     public List<Whisky> getWhiskys() {
         return whiskys;

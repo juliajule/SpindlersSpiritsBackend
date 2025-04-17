@@ -7,6 +7,7 @@ public class TastingRequest {
     private String name;
     private Date date;
     private String imageUrl;
+    private String description;
 
     public TastingRequest() {}
 
@@ -20,5 +21,9 @@ public class TastingRequest {
 
     public Date getDate() {
         return date;
+    }
+
+    public String getDescription() {
+        return description;
     }
 }

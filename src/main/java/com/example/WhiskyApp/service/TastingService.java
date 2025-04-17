@@ -24,7 +24,7 @@ public class TastingService {
                 ? request.getImageUrl()
                 : "images/default_tasting.jpg";
 
-        Tasting tasting = new Tasting(request.getName(), request.getDate(), imageUrl);
+        Tasting tasting = new Tasting(request.getName(), request.getDate(), imageUrl, request.getDescription());
         return tastingRepository.save(tasting);
     }
 
@@ -36,7 +36,7 @@ public class TastingService {
                 ? request.getImageUrl()
                 : "images/default_tasting.jpg";
 
-        Tasting updated = new Tasting(request.getName(), request.getDate(), imageUrl);
+        Tasting updated = new Tasting(request.getName(), request.getDate(), imageUrl, request.getDescription());
 
         try {
             Field idField = Tasting.class.getDeclaredField("id");
