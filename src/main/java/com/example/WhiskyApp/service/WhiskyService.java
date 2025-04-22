@@ -32,6 +32,10 @@ public class WhiskyService {
                 request.getDistillery(),
                 request.getAge(),
                 request.getAlcoholPercentage(),
+                request.getPrice(),
+                request.getLiter(),
+                request.getLink(),
+                request.getUvp(),
                 request.getDescription(),
                 request.getImageUrl(),
                 tasting
@@ -51,6 +55,10 @@ public class WhiskyService {
                 request.getDistillery(),
                 request.getAge(),
                 request.getAlcoholPercentage(),
+                request.getPrice(),
+                request.getLiter(),
+                request.getLink(),
+                request.getUvp(),
                 request.getDescription(),
                 request.getImageUrl(),
                 tasting

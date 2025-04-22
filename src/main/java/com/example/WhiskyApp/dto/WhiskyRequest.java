@@ -1,11 +1,17 @@
 package com.example.WhiskyApp.dto;
 
+import java.math.BigDecimal;
+
 public class WhiskyRequest {
 
     private String name;
     private String distillery;
     private Integer age;
     private Double alcoholPercentage;
+    private BigDecimal price;
+    private BigDecimal liter;
+    private String link;
+    private BigDecimal uvp;
     private String description;
     private String imageUrl;
     private Long tastingId;
@@ -27,6 +33,14 @@ public class WhiskyRequest {
     public Double getAlcoholPercentage() {
         return alcoholPercentage;
     }
+
+    public BigDecimal getPrice() { return price; }
+
+    public BigDecimal getLiter() {return liter;}
+
+    public String getLink() {return link;}
+
+    public BigDecimal getUvp() {return uvp;}
 
     public String getDescription() {
         return description;
