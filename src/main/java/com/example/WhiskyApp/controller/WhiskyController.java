@@ -1,7 +1,9 @@
 package com.example.WhiskyApp.controller;
 
+import com.example.WhiskyApp.dto.WhiskySearchRequest;
 import com.example.WhiskyApp.entity.Whisky;
 import com.example.WhiskyApp.repository.WhiskyRepository;
+import com.example.WhiskyApp.specification.WhiskySpecification;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
@@ -23,5 +25,10 @@ public class WhiskyController {
     @GetMapping("/{id}")
     public Whisky getWhiskyById(@PathVariable Long id) {
         return whiskyRepository.findById(id).orElseThrow(() -> new RuntimeException("Whisky not found"));
+    }
+
+    @PostMapping("/search")
+    public List<Whisky> searchWhiskys(@RequestBody WhiskySearchRequest searchRequest) {
+        return whiskyRepository.findAll(WhiskySpecification.bySearchRequest(searchRequest));
     }
 }
