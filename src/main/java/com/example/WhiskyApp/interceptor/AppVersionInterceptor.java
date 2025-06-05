@@ -14,6 +14,10 @@ public class AppVersionInterceptor implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+        if ("OPTIONS".equalsIgnoreCase(request.getMethod())) {
+            return true;
+        }
+
         String clientVersion = request.getHeader("X-App-Version");
 
         if (clientVersion == null || isOutdated(clientVersion, minVersion)) {

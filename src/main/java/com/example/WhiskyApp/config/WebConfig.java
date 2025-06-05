@@ -25,4 +25,14 @@ public class WebConfig implements WebMvcConfigurer {
                 .addResourceHandler("/images/**")
                 .addResourceLocations("file:/your/path/");
     }
+
+    @Override
+    public void addCorsMappings(CorsRegistry registry) {
+        registry.addMapping("/**") // Alle Endpunkte
+                .allowedOrigins("*") // Achtung: Nur für Tests ALLES erlauben
+                .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") // HTTP Methoden
+                .allowedHeaders("*") // Alle Header zulassen
+                .exposedHeaders("Authorization") // Falls du Tokens zurückgibst
+                .allowCredentials(false); // Ohne Cookies
+    }
 }
