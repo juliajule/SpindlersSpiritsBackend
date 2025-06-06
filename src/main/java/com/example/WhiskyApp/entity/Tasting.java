@@ -35,6 +35,7 @@ public class Tasting {
         this.name = name;
         this.date = date;
         this.imageUrl = imageUrl;
+        this.description = description;
         this.whiskys = whiskys;
     }
 
@@ -42,6 +43,7 @@ public class Tasting {
         this.name = name;
         this.date = date;
         this.imageUrl = imageUrl;
+        this.description = description;
     }
 
     public Long getId() {
