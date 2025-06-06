@@ -2,6 +2,7 @@ package com.example.WhiskyApp.config;
 
 import com.example.WhiskyApp.interceptor.AppVersionInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.*;
 
@@ -10,6 +11,9 @@ public class WebConfig implements WebMvcConfigurer {
 
     @Autowired
     private AppVersionInterceptor versionInterceptor;
+
+    @Value("${image.upload.dir}")
+    private String uploadDir;
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
@@ -23,7 +27,7 @@ public class WebConfig implements WebMvcConfigurer {
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry
                 .addResourceHandler("/images/**")
-                .addResourceLocations("file:/your/path/");
+                .addResourceLocations("file:" + uploadDir + "/");
     }
 
     @Override

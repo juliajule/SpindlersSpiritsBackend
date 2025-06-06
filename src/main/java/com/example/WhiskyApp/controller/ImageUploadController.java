@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.nio.file.*;
 
 @RestController
-@RequestMapping("/admin")
+@RequestMapping("/admin/images")
 public class ImageUploadController {
 
     @Value("${image.upload.dir}")
